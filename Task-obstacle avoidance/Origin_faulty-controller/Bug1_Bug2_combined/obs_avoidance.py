@@ -15,6 +15,12 @@ class MyRobotController:
     def set_speeds(self, left_obstacle, right_obstacle):
         leftSpeed  = 0.5 * self.MAX_SPEED
         rightSpeed = 0.5 * self.MAX_SPEED
+        if left_obstacle:
+            leftSpeed  = 0.5 * self.MAX_SPEED
+            rightSpeed = -0.5 * self.MAX_SPEED
+        elif right_obstacle:
+            leftSpeed  = -0.5 * self.MAX_SPEED
+            rightSpeed = 0.5 * self.MAX_SPEED
         return leftSpeed, rightSpeed
 
 def manual_tests():

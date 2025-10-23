@@ -8,8 +8,8 @@ class MyRobotController:
         self.MAX_SPEED = max_speed
 
     def detect_obstacles(self, psValues):
-        right_obstacle = psValues[0] > 80.0 or psValues[1] > 80.0 or psValues[2] > 80.0
-        left_obstacle  = psValues[5] > 80.0 or psValues[6] > 80.0 or psValues[7] > 80.0
+        right_obstacle = psValues[0] < 80.0 or psValues[1] < 80.0 or psValues[2] < 80.0
+        left_obstacle  = psValues[5] < 80.0 or psValues[6] < 80.0 or psValues[7] < 80.0
         return left_obstacle, right_obstacle
 
     def set_speeds(self, left_obstacle, right_obstacle):
