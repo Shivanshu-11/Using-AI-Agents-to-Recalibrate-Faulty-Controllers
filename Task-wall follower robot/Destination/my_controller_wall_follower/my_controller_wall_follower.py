@@ -36,9 +36,6 @@ def run_robot(robot):
 # - perform simulation steps until Webots is stopping the controller
     # Main loop
     while robot.step(timestep) != -1:
-        for ind in range(8):
-            print("ind: {}, val: {}".format(ind, prox_sensors[ind].getValue()))
-
         left_wall = prox_sensors[5].getValue() > 80
         front_wall = prox_sensors[7].getValue() > 80
 
