@@ -1,0 +1,14 @@
+1. No obstacles
+Input: [0][0][0][0][0][0][0][0]
+
+Why: All sensor values are low; robot is far from any obstacle.
+
+Expected behavior:
+
+left_obstacle: False
+(No left-side sensor above threshold)
+
+right_obstacle: False
+(No right-side sensor above threshold)
+
+Wheel speeds: Both set to half of max speed (0.5 * MAX_SPEED) so the robot moves straight ahead.

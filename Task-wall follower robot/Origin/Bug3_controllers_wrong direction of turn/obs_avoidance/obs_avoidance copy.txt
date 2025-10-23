@@ -1,0 +1,30 @@
+TEST 1: No obstacles
+  psValues: [0, 0, 0, 0, 0, 0, 0, 0]
+  Detected left: False (expected: False)
+  Detected right: False (expected: False)
+  leftSpeed: 3.14, rightSpeed: 3.14
+------------------------------
+TEST 2: Left obstacle
+  psValues: [0, 0, 0, 0, 0, 90, 90, 90]
+  Detected left: False (expected: True)
+  Detected right: False (expected: False)
+  leftSpeed: 3.14, rightSpeed: 3.14
+------------------------------
+TEST 3: Right obstacle
+  psValues: [90, 90, 90, 0, 0, 0, 0, 0]
+  Detected left: False (expected: False)
+  Detected right: False (expected: True)
+  leftSpeed: 3.14, rightSpeed: 3.14
+------------------------------
+TEST 4: Both sides obstacles
+  psValues: [90, 0, 0, 0, 0, 90, 0, 90]
+  Detected left: False (expected: True)
+  Detected right: False (expected: True)
+  leftSpeed: 3.14, rightSpeed: 3.14
+------------------------------
+TEST 5: All sensors at threshold
+  psValues: [80.0, 80.0, 80.0, 80.0, 80.0, 80.0, 80.0, 80.0]
+  Detected left: False (expected: False)
+  Detected right: False (expected: False)
+  leftSpeed: 3.14, rightSpeed: 3.14
+------------------------------

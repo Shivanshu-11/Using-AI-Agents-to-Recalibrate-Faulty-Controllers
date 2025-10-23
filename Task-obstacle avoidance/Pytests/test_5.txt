@@ -1,0 +1,12 @@
+5. All sensors at threshold
+Input: [80.0, 80.0, 80.0, 80.0, 80.0, 80.0, 80.0, 80.0]
+
+Why: All sensor readings are exactly on the threshold boundary. Since your code uses > 80.0 for obstacle detection, no sensor triggers as 'obstacle'.
+
+Expected behavior:
+
+left_obstacle: False
+
+right_obstacle: False
+
+Wheel speeds: Robot moves straight ahead at half speed.

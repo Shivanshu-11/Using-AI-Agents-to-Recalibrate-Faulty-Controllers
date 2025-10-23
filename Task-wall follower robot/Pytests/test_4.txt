@@ -1,0 +1,13 @@
+4. Both sides obstacles
+Input: [90][0][0][0][0][90][0][90]
+
+Why: Both a right-side and one or more left-side sensors detect high values.
+
+Expected behavior:
+
+left_obstacle: True
+(Left side takes priority if both detected)
+
+right_obstacle: True
+
+Wheel speeds: Per your code logic, robot prioritizes turning right as when only left_obstacle is detected (leftSpeed = +0.5 * MAX_SPEED, rightSpeed = -0.5 * MAX_SPEED).

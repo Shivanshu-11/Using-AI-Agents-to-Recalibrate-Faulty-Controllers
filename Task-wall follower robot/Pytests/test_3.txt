@@ -1,0 +1,12 @@
+3. Right obstacle
+Input: [90][90][90][0][0][0][0][0]
+
+Why: Only the right-side sensors (positions 0, 1, 2) detect high values.
+
+Expected behavior:
+
+left_obstacle: False
+
+right_obstacle: True
+
+Wheel speeds: Robot turns left (left wheel backward, right wheel forward): leftSpeed = -0.5 * MAX_SPEED, rightSpeed = +0.5 * MAX_SPEED.
